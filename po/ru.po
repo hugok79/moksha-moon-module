@@ -1,91 +1,91 @@
-# Norwegian Bokmal translation for enlightenment
+# Russian translation for enlightenment
 # This file is distributed under the same license as the enlightenment package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2009-07-17 15:33+0800\n"
-"PO-Revision-Date: 2009-03-21 15:28+0000\n"
-"Last-Translator: Kenneth Langdalen <Unknown>\n"
-"Language-Team: Norwegian Bokmal <nb@li.org>\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2009-07-08 13:17+0800\n"
+"PO-Revision-Date: 2009-04-17 18:54+0000\n"
+"Last-Translator: Roman Azarenko aka BasicXP <x12ozmouse@ya.ru>\n"
+"Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../src/e_mod_config.c:101
 msgid "Moon Configuration"
-msgstr ""
+msgstr "Конфигурация модуля \"Луна\""
 
 #: ../src/e_mod_config.c:157
 msgid "Display Settings"
-msgstr ""
+msgstr "Настройки отображения"
 
 #: ../src/e_mod_config.c:158
 msgid "Animated Clouds"
-msgstr ""
+msgstr "Анимированные облака"
 
 #: ../src/e_mod_config.c:162
 msgid "Moon Phase Value"
-msgstr ""
+msgstr "Значение фазы луны"
 
 #: ../src/e_mod_config.c:164
 msgid "Show always"
-msgstr "Vis alltid"
+msgstr "Всегда показывать"
 
 #: ../src/e_mod_config.c:166
 msgid "Show on mouse over"
-msgstr ""
+msgstr "Показывать при нахождении мыши над"
 
 #: ../src/e_mod_config.c:168
 msgid "Never show"
-msgstr ""
+msgstr "Никогда не показывать"
 
 #: ../src/e_mod_config.c:172
 msgid "Description"
-msgstr "Beskrivelse"
+msgstr "Описание"
 
 #: ../src/e_mod_config.c:175
 msgid "Numerical"
-msgstr ""
+msgstr "Числовой"
 
 #: ../src/e_mod_main.c:207
 msgid "Moon"
-msgstr "Måne"
+msgstr "Луна"
 
 #: ../src/e_mod_main.c:247
 msgid "Configuration"
-msgstr ""
+msgstr "Параметры"
 
 #: ../src/e_mod_main.c:491
 msgid "New Moon"
-msgstr "Nymåne"
+msgstr "Новолуние"
 
 #: ../src/e_mod_main.c:493
 msgid "Waxing Crescent"
-msgstr ""
+msgstr "Полумесяц (в сторону полнолуния)"
 
 #: ../src/e_mod_main.c:495
 msgid "First Quarter"
-msgstr ""
+msgstr "Первая четверть"
 
 #: ../src/e_mod_main.c:497
 msgid "Waxing Gibbous"
-msgstr ""
+msgstr "Между полнолунием и первой четвертью"
 
 #: ../src/e_mod_main.c:499
 msgid "Full Moon"
-msgstr "Fullmåne"
+msgstr "Полнолуние"
 
 #: ../src/e_mod_main.c:501
 msgid "Waning Gibbous"
-msgstr ""
+msgstr "Между полнолунием и последней четвертью"
 
 #: ../src/e_mod_main.c:503
 msgid "Last Quarter"
-msgstr ""
+msgstr "Последняя четверть"
 
 #: ../src/e_mod_main.c:505
 msgid "Waning Crescent"
-msgstr ""
+msgstr "Полумесяц (в сторону новолуния)"

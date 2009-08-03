@@ -1,5 +1,5 @@
 images {
-   image: "moon.png" COMP;
+   image: "module_icon.png" COMP;
 }
 collections {
    group {
@@ -12,7 +12,7 @@ collections {
 	       state: "default" 0.0;
 	       aspect: 1.0 1.0;
 	       aspect_preference: BOTH;
-	       image.normal: "moon.png";
+	       image.normal: "module_icon.png";
 	    }
 	 }
       }

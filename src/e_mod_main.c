@@ -91,12 +91,9 @@ EAPI E_Module_Api e_modapi =
 EAPI void *
 e_modapi_init(E_Module *module)
 {
-   char buf[4096];
-
-   /* Set up module message catalog */
-   snprintf(buf, sizeof(buf), "%s/locale", e_module_dir_get(module));
-   bindtextdomain(PACKAGE, buf);
-   bind_textdomain_codeset(PACKAGE, "UTF-8");
+   /* Set up module locales*/
+   bindtextdomain(LOCALEDOMAIN, LOCALEDIR);
+   bind_textdomain_codeset(LOCALEDOMAIN, "UTF-8");
 
    moon_config_init(module);
 

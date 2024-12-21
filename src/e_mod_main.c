@@ -50,7 +50,6 @@ struct _Moon_Timer
 };
 
 static void          _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info); 
-static void          _menu_cb_post(void *data, E_Menu *m);
 static void          _moon_inst_cb_menu_configure(void *data, E_Menu *m, E_Menu_Item *mi);
 
 static void          _moon_timer_init();
@@ -231,7 +230,7 @@ _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
 
    inst = data;
    ev = event_info;
-   if ((ev->button == 3) && (!moon_config->menu))
+   if (ev->button == 3)
      {
 	E_Menu *m;
 	E_Menu_Item *mi;
@@ -244,7 +243,6 @@ _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
 	e_menu_item_callback_set(mi, _moon_inst_cb_menu_configure, obj); 
 	
 	m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
-	e_menu_post_deactivate_callback_set(m, _menu_cb_post, inst);
 	moon_config->menu = m;
 	e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, 
 					  &cx, &cy, &cw, &ch);
@@ -257,13 +255,6 @@ _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
      }
 }
 
-static void
-_menu_cb_post(void *data, E_Menu *m)
-{
-   if (!moon_config->menu) return;
-   e_object_del(E_OBJECT(moon_config->menu));
-   moon_config->menu = NULL;
-}
 
 static void
 _moon_inst_cb_menu_configure(void *data, E_Menu *m, E_Menu_Item *mi)

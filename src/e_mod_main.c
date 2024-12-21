@@ -6,7 +6,7 @@
 #include "CalcEphem.h"
 
 /******************************************************************************/
-/* 
+/*
  * Gadcon requirements
  */
 
@@ -49,7 +49,7 @@ struct _Moon_Timer
    Eina_List   *clients;
 };
 
-static void          _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info); 
+static void          _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info);
 static void          _moon_inst_cb_menu_configure(void *data, E_Menu *m, E_Menu_Item *mi);
 
 static void          _moon_timer_init();
@@ -74,7 +74,7 @@ static void          _moon_face_signal_cb(void *data, Evas_Object *o, const char
 static double _test_val;
 #endif
 
-/* 
+/*
  * Moon module global data
  */
 static Moon_Timer *_moon_timer = NULL;
@@ -105,7 +105,7 @@ e_modapi_init(E_Module *module)
 
 EAPI int
 e_modapi_shutdown(E_Module *module)
-{  
+{
    e_gadcon_provider_unregister(&_gadcon_class);
    _module = NULL;
    _moon_timer_shutdown();
@@ -138,7 +138,7 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    if (!e_theme_edje_object_set(o, "base/theme/modules/moon",
 				"module/moon/main"))
      {
-	snprintf(edje_path, sizeof(edje_path), "%s/moon.edj", 
+	snprintf(edje_path, sizeof(edje_path), "%s/moon.edj",
 		 e_module_dir_get(_module));
 	edje_object_file_set(o, edje_path, "module/moon/main");
      }
@@ -237,17 +237,17 @@ _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
 	mi = e_menu_item_new(m);
 	e_menu_item_label_set(mi, D_("Settings"));
 	e_util_menu_item_theme_icon_set(mi, "preferences-system");
-	e_menu_item_callback_set(mi, _moon_inst_cb_menu_configure, obj); 
-	
+	e_menu_item_callback_set(mi, _moon_inst_cb_menu_configure, obj);
+
 	m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
 	moon_config->menu = m;
-	e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, 
+	e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon,
 					  &cx, &cy, &cw, &ch);
-	e_menu_activate_mouse(m, 
+	e_menu_activate_mouse(m,
 			      e_util_zone_current_get(e_manager_current_get()),
 			      cx + ev->output.x, cy + ev->output.y, 1, 1,
 			      E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
-	evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button, 
+	evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
 	      EVAS_BUTTON_NONE, ev->timestamp, NULL);
      }
 }
@@ -282,7 +282,7 @@ _moon_timer_shutdown()
    ecore_timer_del(_moon_timer->timer);
    if (_moon_timer->clients)
      printf("Moon module leak on shutdown!\n");
-   free(_moon_timer); 
+   free(_moon_timer);
    _moon_timer = NULL;
 }
 
@@ -307,7 +307,7 @@ _moon_timer_cb_update(void *data)
 
    if (!_moon_timer->clients)
      return EINA_TRUE;
- 
+
    msg = _moon_update_msg_prepare();
    for (l = _moon_timer->clients; l; l = l->next)
      {
@@ -322,7 +322,7 @@ _moon_timer_cb_update(void *data)
 /* Update the specified instance with the latest configuration */
 void
 moon_reset(Evas_Object *o)
-{ 
+{
    Moon_Config_Msg *cmsg;
    Moon_Update_Msg *umsg;
 
@@ -355,7 +355,7 @@ _moon_update_msg_prepare()
 #ifdef DEBUG
    msg->val[0] = _test_val;
    _test_val = _test_val + (1.0 / 180.0);
-   if (_test_val > 1.0) 
+   if (_test_val > 1.0)
       _test_val = 0.0;
 #endif
    str = _moon_display_string_get(moon_config, msg->val[0]);
@@ -366,9 +366,9 @@ _moon_update_msg_prepare()
 static void
 _moon_update_msg_send(Evas_Object *o, Moon_Update_Msg *msg)
 {
-   edje_object_message_send(o, 
-	 EDJE_MESSAGE_STRING_FLOAT_SET, 
-	 1, 
+   edje_object_message_send(o,
+	 EDJE_MESSAGE_STRING_FLOAT_SET,
+	 1,
 	 (Edje_Message_String_Float_Set *) msg);
 }
 
@@ -376,7 +376,7 @@ static void
 _moon_update_msg_free(Moon_Update_Msg *msg)
 {
    free(msg->str);
-   free(msg); 
+   free(msg);
 }
 
 static Moon_Config_Msg *
@@ -384,8 +384,8 @@ _moon_config_msg_prepare()
 {
    Edje_Message_Int_Set *msg;
 
-   msg = calloc(1, 
-	        sizeof(Edje_Message_Int_Set) - 
+   msg = calloc(1,
+	        sizeof(Edje_Message_Int_Set) -
 		sizeof(int) +
 		(3 * sizeof(int)));
    msg->count = 3;
@@ -399,9 +399,9 @@ _moon_config_msg_prepare()
 static void
 _moon_config_msg_send(Evas_Object *o, Moon_Config_Msg *msg)
 {
-   edje_object_message_send(o, 
-	 EDJE_MESSAGE_INT_SET, 
-	 1, 
+   edje_object_message_send(o,
+	 EDJE_MESSAGE_INT_SET,
+	 1,
 	 (Edje_Message_Int_Set *) msg);
 }
 
@@ -418,19 +418,19 @@ _moon_phase_calc()
    struct tm *universal_time;
    double UT;
    CTrans c;
-   
+
    current_time = time(NULL);
-   if (current_time == -1) return 0; 
+   if (current_time == -1) return 0;
 
    /* Get Universal Time */
    universal_time = gmtime(&current_time);
 
    /* Date in YYYYMMDD format */
-   date = (universal_time->tm_year + 1900) * 10000 + 
+   date = (universal_time->tm_year + 1900) * 10000 +
           (universal_time->tm_mon + 1) * 100 +
 	  universal_time->tm_mday;
 
-   /* UTC representation in decimal hours */ 
+   /* UTC representation in decimal hours */
    UT = universal_time->tm_hour +
         universal_time->tm_min / 60.0 +
         universal_time->tm_sec / 3600.0;
@@ -444,11 +444,11 @@ _moon_phase_calc()
    printf("Visible is %d\n", c.Visible);
 #endif
 
-   if (c.MoonPhase < 0.0) 
+   if (c.MoonPhase < 0.0)
       return 0.0;
-   if (c.MoonPhase > 1.0) 
+   if (c.MoonPhase > 1.0)
       return 1.0;
-   return c.MoonPhase; 
+   return c.MoonPhase;
 }
 
 static char *

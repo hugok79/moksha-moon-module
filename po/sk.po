@@ -1,6 +1,6 @@
 # Slovak translation for enlightenment
 # This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# Štefan Uram <thewaiter@bodhilinux.com>, 2024.
 #
 msgid ""
 msgstr ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
 "POT-Creation-Date: 2024-12-21 13:18+0100\n"
 "PO-Revision-Date: 2009-06-12 16:35+0000\n"
-"Last-Translator: milboy <Unknown>\n"
+"Last-Translator: tefan Uram <thewaiter@bodhilinux.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -29,7 +29,7 @@ msgstr "Animované oblaky"
 
 #: src/e_mod_config.c:158
 msgid "Moon Phase Value"
-msgstr "Hodnota fáze mesiaca"
+msgstr "Hodnota fázy mesiaca"
 
 #: src/e_mod_config.c:160
 msgid "Show always"
@@ -91,8 +91,3 @@ msgstr "Posledná štvrť"
 msgid "Waning Crescent"
 msgstr "Ubúdajúci kosáčik"
 
-#~ msgid "Moon Configuration"
-#~ msgstr "Konfigurácia modulu mesiac"
-
-#~ msgid "Configuration"
-#~ msgstr "Konfigurácia"

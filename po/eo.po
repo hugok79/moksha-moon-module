@@ -5,7 +5,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: eo\n"
+"Project-Id-Version: moon\n"
 "Report-Msgid-Bugs-To: $MSGID_BUGS_ADDRESS\n"
 "POT-Creation-Date: 2013-06-21 01:05+0200\n"
 "PO-Revision-Date: 2013-06-21 07:34+0000\n"

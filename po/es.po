@@ -1,9 +1,7 @@
-# Spanish translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
+# Spanish translation for the Moon module.
+# This file is put in the public domain.
 #
 # chilicuil <Unknown>, 2008.
-# Francisco Perez Lopez, 2008.
-# DiegoJ <diegojromerolopez@gmail.com>, 2009.
 #
 msgid ""
 msgstr ""

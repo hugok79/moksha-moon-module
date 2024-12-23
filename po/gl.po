@@ -1,5 +1,6 @@
-# Galician translation of moon
+# Galician translation for the Moon module.
 # This file is put in the public domain.
+#
 # Aníbal Garrido <khany@member.trisquel.info>, 2012.
 #
 msgid ""

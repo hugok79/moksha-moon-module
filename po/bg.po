@@ -1,5 +1,6 @@
-# Bulgarian translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
+# Bulgarian translation for the Moon module.
+# This file is put in the public domain.
+#
 # Siyan Panayotov <fungi_vn@yahoo.com>, 2009.
 #
 msgid ""

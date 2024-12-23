@@ -1,6 +1,7 @@
-# Greek translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# Greek translation for the Moon module.
+# This file is put in the public domain.
+#
+# Galatsanos Panagiotis <Unknown>\n"
 #
 msgid ""
 msgstr ""

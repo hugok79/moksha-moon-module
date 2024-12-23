@@ -1,5 +1,6 @@
-# Italian translation for E17 Moon module.
+# Italian translation for the Moon module.
 # This file is put in the public domain.
+#
 # Massimo Maiurana <maiurana@inwind.it>, 2006.
 #
 msgid ""

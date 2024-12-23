@@ -1,6 +1,7 @@
-# German translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+# German translation for for the Moon module.
+# This file is put in the public domain.
+#
+# MixCool <lars.thoms@mixcool.de>
 #
 msgid ""
 msgstr ""

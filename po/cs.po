@@ -1,7 +1,8 @@
-# Czech translation.
+# Czech translation for the Moon module.
 # This file is put in the public domain.
+#
 # quaker66@gmail.com
-# Vít Pelčák <vit@pelcak.org>, 2011.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Moon\n"

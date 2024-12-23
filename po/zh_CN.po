@@ -1,8 +1,7 @@
-# Moon module (e17), French translation
+# Simplified Chinese translation for the Moon module.
 # This file is put in the public domain.
 #
 # Aron Xu <aronmalache@163.com> <aronmalache@163.com>, 2008.
-#
 #
 msgid ""
 msgstr ""

@@ -1,7 +1,7 @@
-# Swedish translation for E17 Moon module.
+# Swedish translation for the Moon module.
 # This file is put in the public domain.
+#
 # Anders Troback <enlightenment@troback.com>, 2006.
-# Daniel Nylander <yeager@ubuntu.com>, 2009.
 #
 msgid ""
 msgstr ""

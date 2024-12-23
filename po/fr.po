@@ -1,5 +1,6 @@
-# Moon module (e17), French translation.
+# French translation for the Moon module.
 # This file is put in the public domain.
+#
 # batden <batden@orange.fr>, 2009, 2010.
 #
 msgid ""

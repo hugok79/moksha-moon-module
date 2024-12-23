@@ -1,6 +1,7 @@
-# Russian translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# Russian translation for the Moon module.
+# This file is put in the public domain.
+#
+# Roman Azarenko aka BasicXP <x12ozmouse@ya.ru>
 #
 msgid ""
 msgstr ""

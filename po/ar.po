@@ -1,5 +1,6 @@
-# Arabic translation for moon.
+# Arabic translation for the Moon module.
 # This file is put in the public domain.
+#
 # sameeer hussain <almusalimalmusalimah> 2011.
 #
 msgid ""

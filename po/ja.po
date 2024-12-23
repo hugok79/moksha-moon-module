@@ -1,5 +1,6 @@
-# Japanese translation for E17 Moon module.
+# Japanese translation for the Moon module.
 # This file is put in the public domain.
+#
 # David Steveson <david35472@gmail.com>, 2006.
 #
 msgid ""

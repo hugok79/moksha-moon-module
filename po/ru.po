@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: moon\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2009-08-25 17:14+0800\n"
 "PO-Revision-Date: 2009-04-17 18:54+0000\n"
 "Last-Translator: Roman Azarenko aka BasicXP <x12ozmouse@ya.ru>\n"

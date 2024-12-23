@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: moon\n"
-"Report-Msgid-Bugs-To: $MSGID_BUGS_ADDRESS\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
 "POT-Creation-Date: 2013-08-24 11:51+0200\n"
 "PO-Revision-Date: 2014-05-26 22:08+0000\n"
 "Last-Translator: joancoll <Unknown>\n"

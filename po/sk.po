@@ -50,7 +50,7 @@ msgstr "Popis"
 
 #: src/e_mod_config.c:171
 msgid "Numerical"
-msgstr "Číselný"
+msgstr "Hodnota"
 
 #: src/e_mod_main.c:204
 msgid "Moon"

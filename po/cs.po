@@ -94,8 +94,3 @@ msgstr "Poslední čtvrť"
 msgid "Waning Crescent"
 msgstr "Ubývající srpek"
 
-#~ msgid "Moon Configuration"
-#~ msgstr "Konfigurace moon modulu"
-
-#~ msgid "Configuration"
-#~ msgstr "Konfigurace"

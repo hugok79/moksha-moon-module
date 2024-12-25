@@ -136,11 +136,11 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
 
    o = edje_object_add(gc->evas);
    if (!e_theme_edje_object_set(o, "base/theme/modules/moon",
-				"module/moon/main"))
+				   "module/moon/main"))
      {
-	snprintf(edje_path, sizeof(edje_path), "%s/moon.edj",
-		 e_module_dir_get(_module));
-	edje_object_file_set(o, edje_path, "module/moon/main");
+        snprintf(edje_path, sizeof(edje_path), "%s/moon.edj",
+                 e_module_dir_get(_module));
+        edje_object_file_set(o, edje_path, "module/moon/main");
      }
    evas_object_show(o);
 
@@ -151,7 +151,7 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    inst->o_gadget = o;
 
    evas_object_event_callback_add(o, EVAS_CALLBACK_MOUSE_DOWN,
-	                                   _button_cb_mouse_down, inst);
+                                  _button_cb_mouse_down, inst);
 
    /* Configure this instance */
    cmsg = _moon_config_msg_prepare();
@@ -229,26 +229,26 @@ _button_cb_mouse_down(void *data, Evas *e, Evas_Object *obj, void *event_info)
    ev = event_info;
    if (ev->button == 3)
      {
-	E_Menu *m;
-	E_Menu_Item *mi;
-	int cx, cy, cw, ch;
+        E_Menu *m;
+        E_Menu_Item *mi;
+        int cx, cy, cw, ch;
 
-	m = e_menu_new();
-	mi = e_menu_item_new(m);
-	e_menu_item_label_set(mi, D_("Settings"));
-	e_util_menu_item_theme_icon_set(mi, "preferences-system");
-	e_menu_item_callback_set(mi, _moon_inst_cb_menu_configure, obj);
+        m = e_menu_new();
+        mi = e_menu_item_new(m);
+        e_menu_item_label_set(mi, D_("Settings"));
+        e_util_menu_item_theme_icon_set(mi, "preferences-system");
+        e_menu_item_callback_set(mi, _moon_inst_cb_menu_configure, obj);
 
-	m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
-	moon_config->menu = m;
-	e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon,
-					  &cx, &cy, &cw, &ch);
-	e_menu_activate_mouse(m,
-			      e_util_zone_current_get(e_manager_current_get()),
-			      cx + ev->output.x, cy + ev->output.y, 1, 1,
-			      E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
-	evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
-	      EVAS_BUTTON_NONE, ev->timestamp, NULL);
+        m = e_gadcon_client_util_menu_items_append(inst->gcc, m, 0);
+        moon_config->menu = m;
+        e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon,
+                                          &cx, &cy, &cw, &ch);
+        e_menu_activate_mouse(m,
+                              e_util_zone_current_get(e_manager_current_get()),
+                              cx + ev->output.x, cy + ev->output.y, 1, 1,
+                              E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
+        evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
+                                 EVAS_BUTTON_NONE, ev->timestamp, NULL);
      }
 }
 
@@ -270,9 +270,9 @@ _moon_timer_init()
 {
    if (!_moon_timer)
      {
-	_moon_timer = E_NEW(Moon_Timer, 1);
-	_moon_timer->timer = ecore_timer_add(60.0, _moon_timer_cb_update, NULL);
-	_moon_timer->clients = NULL;
+        _moon_timer = E_NEW(Moon_Timer, 1);
+        _moon_timer->timer = ecore_timer_add(60.0, _moon_timer_cb_update, NULL);
+        _moon_timer->clients = NULL;
      }
 }
 
@@ -311,9 +311,9 @@ _moon_timer_cb_update(void *data)
    msg = _moon_update_msg_prepare();
    for (l = _moon_timer->clients; l; l = l->next)
      {
-	Evas_Object *gadget;
-	gadget = l->data;
-	_moon_update_msg_send(gadget, msg);
+        Evas_Object *gadget;
+        gadget = l->data;
+        _moon_update_msg_send(gadget, msg);
      }
    _moon_update_msg_free(msg);
    return EINA_TRUE;
@@ -330,13 +330,13 @@ moon_reset(Evas_Object *o)
    umsg = _moon_update_msg_prepare();
    if (o)
      {
-	_moon_config_msg_send(o, cmsg);
+        _moon_config_msg_send(o, cmsg);
         _moon_update_msg_send(o, umsg);
      }
    else
      {
-	// FIXME
-	printf("Moon module bug: moon_config_reset wants a valid object\n");
+        // FIXME
+        printf("Moon module bug: moon_config_reset wants a valid object\n");
      }
    _moon_config_msg_free(cmsg);
    _moon_update_msg_free(umsg);
@@ -367,9 +367,9 @@ static void
 _moon_update_msg_send(Evas_Object *o, Moon_Update_Msg *msg)
 {
    edje_object_message_send(o,
-	 EDJE_MESSAGE_STRING_FLOAT_SET,
-	 1,
-	 (Edje_Message_String_Float_Set *) msg);
+         EDJE_MESSAGE_STRING_FLOAT_SET,
+         1,
+         (Edje_Message_String_Float_Set *) msg);
 }
 
 static void
@@ -385,9 +385,9 @@ _moon_config_msg_prepare()
    Edje_Message_Int_Set *msg;
 
    msg = calloc(1,
-	        sizeof(Edje_Message_Int_Set) -
-		sizeof(int) +
-		(3 * sizeof(int)));
+                sizeof(Edje_Message_Int_Set) -
+                sizeof(int) +
+                (3 * sizeof(int)));
    msg->count = 3;
    msg->val[0] = moon_config->show_phase_value;
    msg->val[1] = moon_config->show_border; // deprecated
@@ -400,9 +400,9 @@ static void
 _moon_config_msg_send(Evas_Object *o, Moon_Config_Msg *msg)
 {
    edje_object_message_send(o,
-	 EDJE_MESSAGE_INT_SET,
-	 1,
-	 (Edje_Message_Int_Set *) msg);
+         EDJE_MESSAGE_INT_SET,
+         1,
+         (Edje_Message_Int_Set *) msg);
 }
 
 static void
@@ -428,7 +428,7 @@ _moon_phase_calc()
    /* Date in YYYYMMDD format */
    date = (universal_time->tm_year + 1900) * 10000 +
           (universal_time->tm_mon + 1) * 100 +
-	  universal_time->tm_mday;
+           universal_time->tm_mday;
 
    /* UTC representation in decimal hours */
    UT = universal_time->tm_hour +
@@ -465,30 +465,30 @@ _moon_display_string_get(Config *conf, double phase)
    switch (value_format)
      {
       case VALUE_FMT_NUM:
-	 if (phase <= 0.50)
-	   snprintf(strbuf, sizeof(strbuf), "%.2f%%", phase * 200);
-	 else if (phase > 0.50)
-	   snprintf(strbuf, sizeof(strbuf), "%.2f%%", (0.50 - (phase - 0.50)) * 200);
-	 break;
+         if (phase <= 0.50)
+           snprintf(strbuf, sizeof(strbuf), "%.2f%%", phase * 200);
+         else if (phase > 0.50)
+           snprintf(strbuf, sizeof(strbuf), "%.2f%%", (0.50 - (phase - 0.50)) * 200);
+         break;
       case VALUE_FMT_STR:
-	 // hmmmmm, something like this...
-	 if (phase < 0.050)
-	   snprintf(strbuf, sizeof(strbuf), "%s", D_("New Moon"));
-	 else if ((phase >= 0.050) && (phase < 0.225))
-	   snprintf(strbuf, sizeof(strbuf), "%s", D_("Waxing Crescent"));
-	 else if ((phase >= 0.225) && (phase < 0.275))
-	   snprintf(strbuf, sizeof(strbuf), "%s", D_("First Quarter"));
-	 else if ((phase >= 0.275) && (phase < 0.475))
-	   snprintf(strbuf, sizeof(strbuf), "%s", D_("Waxing Gibbous"));
-	 else if ((phase >= 0.475) && (phase < 0.525))
-	   snprintf(strbuf, sizeof(strbuf), "%s", D_("Full Moon"));
-	 else if ((phase >= 0.525) && (phase < 0.725))
-	   snprintf(strbuf, sizeof(strbuf), "%s", D_("Waning Gibbous"));
-	 else if ((phase >= 0.725) && (phase < 0.775))
-	   snprintf(strbuf, sizeof(strbuf), "%s", D_("Last Quarter"));
-	 else if  (phase >= 0.775)
-	   snprintf(strbuf, sizeof(strbuf), "%s", D_("Waning Crescent"));
-	 break;
+         // hmmmmm, something like this...
+         if (phase < 0.050)
+           snprintf(strbuf, sizeof(strbuf), "%s", D_("New Moon"));
+         else if ((phase >= 0.050) && (phase < 0.225))
+           snprintf(strbuf, sizeof(strbuf), "%s", D_("Waxing Crescent"));
+         else if ((phase >= 0.225) && (phase < 0.275))
+           snprintf(strbuf, sizeof(strbuf), "%s", D_("First Quarter"));
+         else if ((phase >= 0.275) && (phase < 0.475))
+           snprintf(strbuf, sizeof(strbuf), "%s", D_("Waxing Gibbous"));
+         else if ((phase >= 0.475) && (phase < 0.525))
+           snprintf(strbuf, sizeof(strbuf), "%s", D_("Full Moon"));
+         else if ((phase >= 0.525) && (phase < 0.725))
+           snprintf(strbuf, sizeof(strbuf), "%s", D_("Waning Gibbous"));
+         else if ((phase >= 0.725) && (phase < 0.775))
+           snprintf(strbuf, sizeof(strbuf), "%s", D_("Last Quarter"));
+         else if  (phase >= 0.775)
+           snprintf(strbuf, sizeof(strbuf), "%s", D_("Waning Crescent"));
+         break;
      }
 
    return strdup(strbuf);

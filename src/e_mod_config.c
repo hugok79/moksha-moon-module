@@ -45,12 +45,12 @@ moon_config_init(E_Module *m)
 
    if (!moon_config)
      {
-	moon_config = E_NEW(Config, 1);
-	moon_config->show_phase_value = POLICY_NO;
-	moon_config->value_format = VALUE_FMT_NUM;
-	moon_config->show_border = POLICY_YES;
-	moon_config->show_cloud_anim = POLICY_NO;
-	moon_config->poll_time = 60.0;
+        moon_config = E_NEW(Config, 1);
+        moon_config->show_phase_value = POLICY_NO;
+        moon_config->value_format = VALUE_FMT_NUM;
+        moon_config->show_border = POLICY_YES;
+        moon_config->show_cloud_anim = POLICY_NO;
+        moon_config->poll_time = 60.0;
      }
    E_CONFIG_LIMIT(moon_config->show_phase_value, POLICY_NO, POLICY_ON_MOUSE_OVER);
    E_CONFIG_LIMIT(moon_config->value_format, VALUE_FMT_STR, VALUE_FMT_NUM);
@@ -64,8 +64,8 @@ moon_config_shutdown()
 {
    if (moon_config->config_dialog)
      {
-	e_object_del(E_OBJECT(moon_config->config_dialog));
-	moon_config->config_dialog = NULL;
+        e_object_del(E_OBJECT(moon_config->config_dialog));
+        moon_config->config_dialog = NULL;
      }
    free(moon_config);
    moon_config = NULL;
@@ -85,17 +85,17 @@ moon_config_dialog_show(Evas_Object *o)
    v = E_NEW(E_Config_Dialog_View, 1);
    if (v)
      {
-	v->create_cfdata           = _create_data;
-	v->free_cfdata             = _free_data;
-	v->basic.apply_cfdata      = _basic_apply_data;
-	v->basic.create_widgets    = _basic_create_widgets;
-	v->advanced.apply_cfdata   = NULL;
-	v->advanced.create_widgets = NULL; 
-	
-	con = e_container_current_get(e_manager_current_get());
-	snprintf(buf, sizeof(buf), "%s/e-module-moon.edj", e_module_dir_get(module));
-	cfd = e_config_dialog_new(con, D_("Moon Settings"), "Moon", "_e_modules_moon_config_dialog", buf, 0, v, o);
-	moon_config->config_dialog = cfd;
+        v->create_cfdata           = _create_data;
+        v->free_cfdata             = _free_data;
+        v->basic.apply_cfdata      = _basic_apply_data;
+        v->basic.create_widgets    = _basic_create_widgets;
+        v->advanced.apply_cfdata   = NULL;
+        v->advanced.create_widgets = NULL; 
+
+        con = e_container_current_get(e_manager_current_get());
+        snprintf(buf, sizeof(buf), "%s/e-module-moon.edj", e_module_dir_get(module));
+        cfd = e_config_dialog_new(con, D_("Moon Settings"), "Moon", "_e_modules_moon_config_dialog", buf, 0, v, o);
+        moon_config->config_dialog = cfd;
      }
 }
 
@@ -184,4 +184,3 @@ _basic_create_widgets(E_Config_Dialog *cfd, Evas *evas, E_Config_Dialog_Data *cf
 
    return o;
 }
-

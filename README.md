@@ -60,7 +60,7 @@ Contributions must be licensed under this project's copyright (see COPYING).
 
 We are always looking for improved or new translations of non-English languages. So a great way to help is to contribute any missing translations or improve some of existing translations.
 
-Developers may wish to look over our todo file and help implement future features.
+Developers may wish to look over our to-do file and help implement future features.
 
 Thanks in advance.
 
@@ -70,9 +70,9 @@ This module is part of our current project to restore all broken e17 modules we 
 
 Donations to [Bodhi Linux](https://www.bodhilinux.com/donate/) would be greatly appreciated and keep our distro moving along. But if you like the work we do for Bodhi and wish to see more of it, we'd be happy about a donation. You can donate via [PayPal](https://www.paypal.com/paypalme/rbtylee).
 
-## Liscense
+## License
 
-This software is released under the same License used in many of the other Enlightenment projects. It is a custom license but fully Open Source. Please see the included [COPYING](https://github.com/rbtylee/moksha-moon-module/blob/master/COPYING) file and, for a less legalese explanation, [COPYING-PLAIN](https://github.com/rbtylee/moksha-moon-module/blob/master/COPYING-PLAIN).
+This software is released under the same license as many of the other Enlightenment projects. It is a custom license but fully Open Source. Please see the included [COPYING](https://github.com/rbtylee/moksha-moon-module/blob/master/COPYING) file and, for a less legalese explanation, [COPYING-PLAIN](https://github.com/rbtylee/moksha-moon-module/blob/master/COPYING-PLAIN).
 
 Simply put, this software is free to use, modify, and redistribute as you see fit. I would like you to please keep the copyright notice the same in any modifications.
 

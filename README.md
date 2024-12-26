@@ -4,6 +4,8 @@
 
 This module is a port of the old e17 Moon Module. It supplies a gadget that displays the current phase of the moon on your desktop or shelf.
 
+<img src="images/screenshot.png">
+
 ## Dependencies
 
 The usual enlightenment build tools: meson, libtool, intltool, pkg-config
@@ -16,7 +18,14 @@ As well as:
 
 ## Installation
 
-This Module is not yet in Moksha's Repo, so you will need to compile the code:
+Bodhi users (BL7 or later) can install via apt:
+
+```ShellSession
+sudo apt update
+sudo apt install moksha-module-moon
+```
+
+All other users have to compile from code.
 
 First, install all the needed dependencies. Note this includes not only EFL but the EFL header files. If you have compiled and installed EFL, and Moksha from the source code this should be no problem. 
 

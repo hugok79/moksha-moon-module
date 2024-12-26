@@ -1,6 +1,14 @@
-COMPILING and INSTALLING:
-
+COMPILING and INSTALLING
+========================
 meson . build
 ninja -C build
 sudo ninja -C build install
 
+Uninstall
+=========
+ninja -C build uninstall
+
+
+Clean build
+===========
+rm -rf build/

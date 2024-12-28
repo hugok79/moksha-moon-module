@@ -279,6 +279,7 @@ collections {
                   size: 11;
                  // min: 1 1;
                   fit: 1 1;
+                  ellipsis: -1;
                   align: 0.5 0.5;
                }
             } 
@@ -286,7 +287,7 @@ collections {
                state: "displayed" 0.0;
                inherit: "default" 0.0;
                color: 255 255 255 167;
-               color3: 0 0 0 32;
+               color3: 0 0 0 196;
             }
          } 
       }
